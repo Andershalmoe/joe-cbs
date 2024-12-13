@@ -1,0 +1,75 @@
+body {
+    background-image: url('../img/Global-Joe and the Juice_044.jpg');
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 100px 0;
+}
+
+#category-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: #ffcee6;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#category-buttons button:hover {
+    background-color: #ffb3cc;
+}
+
+#menu-container {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    background-color: transparent;
+    padding: 20px;
+    padding-top: 20px;
+    border-radius: 8px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    border: none;
+    background: none;
+    padding: 20px;
+    margin: auto auto;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 250px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s; 
+}
+
+.product-card:hover {
+    transform: scale(1.05); 
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.product-card p {
+    margin: 5px 0;
+    color: #666;
+}

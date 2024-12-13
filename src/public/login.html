@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+   
+    <header>
+        <div class="logo">
+            <img src="img/Pink_Logo_2016-01.png" alt="Logo">
+        </div>
+    </header>
+  
+<div class="center">
+    <p class="title">Login</p>
+    <form id="loginForm">
+        <div class="input-group">
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="logPhone" name="phone" required placeholder="+0012345678">
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="logPassword" placeholder="">
+         
+        </div>
+        <button class="sign" type="submit">Sign in</button>
+    </form>
+    <p class="signup">Don't have an account?
+        <a rel="noopener noreferrer" href="verifyPhone.html" class="">Sign up</a>
+    </p>
+</div>
+
+    <script src="./scripts/login.js"></script>
+</body>
+</html>

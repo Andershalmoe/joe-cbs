@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../img/Global-Joe and the Juice_044.jpg');
+    font-weight: bolder;
+    background-size: cover;
+   
+}
+
+.center{
+    width: 320px;
+    border-radius: 0.75rem;
+    background-color: #4c4c4c;
+    padding: 3rem;
+    color: rgba(243, 244, 246, 1);
+    margin: 10rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+
+  .title {
+    text-align: center;
+    font-size: 2rem; 
+    line-height: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem; 
+  }
+
+  #loginform {
+    margin-top: 1.5rem;
+  }
+
+  .input-group {
+    margin-top: 1rem; 
+    font-size: 1rem; 
+    line-height: 1.5rem;
+  }
+
+  .input-group label {
+    display: block;
+    color: #ffffff;
+    margin-bottom: 0.5rem; 
+  }
+
+  .input-group input {
+    width: 90%;
+    border-radius: 0.375rem;
+    border: 1px solid rgba(55, 65, 81, 1);
+    outline: 0;
+    background-color: #fff;
+    padding: 0.75rem 1rem;
+    color: black;
+    margin-bottom: 1rem; 
+  }
+
+  .input-group input:focus {
+    border-color: #f7c1d9;
+  }
+
+  .forgot a,.signup a {
+    color: rgba(243, 244, 246, 1);
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .forgot a:hover, .signup a:hover {
+    text-decoration: underline #ffffff;
+  }
+
+  .sign {
+    display: block;
+    width: 100%;
+    background-color: #f7c1d9;
+    padding: 0.75rem;
+    text-align: center;
+    color: rgba(17, 24, 39, 1);
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: bold;
+  }
+
+
+  .line {
+    height: 1px;
+    flex: 1 1 0%;
+    background-color: rgba(55, 65, 81, 1);
+  }
+
+
+  .signup {
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: #f7c1d9;
+  }
+
+  .submit-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    border: none;
+    background-color: #ff69b4;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+
+  .submit-button:hover {
+    background-color: #ff85c1;
+  }
+  
+  button:hover {
+    background-color: #ffabc4;
+}
+

@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; 
+    padding: 0; 
+    background-color: white;
+    text-align: center;
+    overflow-x: hidden; 
+}
+
+main {
+    
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../img/Global-Joe and the Juice_044.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    padding: 20px; 
+    margin: 0 auto; 
+}
+
+h1 {
+    color: #fff;
+    background: rgba(255, 206, 230, 0.8); 
+    z-index: 9999;
+    padding: 20px 30px;
+    border-radius: 15px;
+    display: inline-block;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 400;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    width: 90%; 
+    margin: 40px auto; 
+}
+
+.day {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.door-front, .door-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000000, 1px 1px 2px #000000, 1px 1px 2px #000000;
+    color: #fff;
+    font-size: 1em;
+    padding: 10px;
+    transition: transform 1s ease-in-out;
+}
+
+.door-front {
+    background-image: url('../img/JuleJoe.png');
+    background-size: 600% 400%; 
+    transform-origin: left;
+    transform: rotateY(0deg);
+}
+
+.door-number{
+color: rgb(129, 12, 12);
+font-size: 30px;
+}
+
+
+.day.opened .door-front {
+    transform: rotateY(-180deg);
+}
+
+#snowCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+}
+

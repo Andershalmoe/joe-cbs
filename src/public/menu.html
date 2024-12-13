@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/menu.css">
+    
+</head>
+<body>
+  
+    <header>
+        <div class="logo">
+            <img src="img/Pink_Logo_2016-01.png" alt="Logo">
+        </div>
+        <nav class="navigation">
+            <a href="menu.html">Menu</a>
+            <a href="advCalendar.html">Christmas</a>
+        </nav>
+    </header>
+    
+
+    <main>
+        <h1>Our Menu</h1>
+        <div id="category-buttons">
+            <button onclick="fetchMenu('sandwiches')">Sandwiches</button>
+            <button onclick="fetchMenu('shakes')">Shakes</button>
+            <button onclick="fetchMenu('shots')">Shots</button>
+        </div>
+        <div id="menu-container"></div>
+    </main>
+    <script src="scripts/menu.js"></script>
+</body>
+</html>

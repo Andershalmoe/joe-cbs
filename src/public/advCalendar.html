@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe's Advent Calendar</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/advCalendar.css">
+</head>
+<body>
+   
+<header>
+    <div class="logo">
+        <img src="img/Pink_Logo_2016-01.png" alt="Logo">
+    </div>
+    <nav class="navigation">
+        <a href="menu.html">Menu</a>
+        <a href="advCalendar.html">Christmas</a>
+    </nav>
+</header>
+
+
+    <main>
+        <h1>❄️JOEs ADVENT CALENDAR❄️</h1>
+        <h2>Open a door every day to reveal a nice surprise!</h2>
+        <div id="calendar">
+    
+            <script>
+                for (let i = 1; i <= 24; i++) {
+                    const row = Math.floor((i - 1) / 6);
+                    const col = (i - 1) % 6;
+        
+                    document.write(`
+                        <div class="day" id="day-${i}" onclick="openDay(${i})">
+                            <div class="door-front" style="background-position: ${col * 100 / 5}% ${row * 100 / 3}%">
+                                <span class="door-number">${i}</span>
+                            </div>
+                            <div class="door-back" id="surprise-${i}"></div>
+                        </div>
+                    `);
+                }
+            </script>
+        </div>
+    </main>
+
+    <canvas id="snowCanvas"></canvas>
+    <script src="./scripts/advCalendar.js"></script>
+</body>
+</html>
