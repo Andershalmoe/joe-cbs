@@ -76,6 +76,8 @@ Disse moduler skal downloades med "npm install ***":
     
     "uuid": "^11.0.3"
 
+    "nginx version:" "nginx/1.26.0 (Ubuntu),
+
 
 # Simulering af vouchere
 
