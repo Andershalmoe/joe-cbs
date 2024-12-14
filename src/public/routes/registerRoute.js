@@ -15,6 +15,12 @@ router.post("/", async (req, res) => {
         return res.status(400).json({ message: "Password must be at least 10 characters long" });
     }
 
+    // Tjek at telefonnummeret er verificeret via HTTP-Only cookie
+    const verifiedPhone = req.cookies.verified_phone;
+    if (!verifiedPhone || verifiedPhone !== phone) {
+        return res.status(400).json({ message: "Phone number not verified or does not match" });
+    }
+
     try {
         const db = req.db;
         const [existingUser] = await db.query("SELECT * FROM users WHERE username = ? OR email = ?", [username, email]);
@@ -55,5 +61,6 @@ router.post("/", async (req, res) => {
         res.status(500).json({ message: "Internal server error" });
     }
 });
+
 
 export default router;

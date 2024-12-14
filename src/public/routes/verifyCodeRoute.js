@@ -20,13 +20,20 @@ router.post("/", async (req, res) => {
 
         const codeIssuedAt = new Date(decoded.iat * 1000);
         const now = new Date();
-        const diffMinutes = Math.floor((now - codeIssuedAt) / (1000 * 60)); // Beregn forskel i minutter
+        const diffMinutes = Math.floor((now - codeIssuedAt) / (1000 * 60));
 
         if (diffMinutes > 10) {
             return res.status(400).json({ message: "Verification code expired" });
         }
 
-        // Slet den midlertidige cookie
+        
+        res.cookie("verified_phone", decoded.phone, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+            maxAge: 2 * 60 * 1000, // 2 minutes
+        });
+
+      
         res.clearCookie("temp_token");
 
         return res.status(200).json({
@@ -40,3 +47,4 @@ router.post("/", async (req, res) => {
 });
 
 export default router;
+

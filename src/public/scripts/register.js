@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const phone = urlParams.get("phone");
 
     if (phone) {
-        document.getElementById("phone").value = phone; // Udfyld telefonnummer automatisk
+        document.getElementById("phone").value = phone;
     }
 });
 
